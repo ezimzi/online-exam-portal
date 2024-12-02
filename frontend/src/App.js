@@ -1,19 +1,20 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/basic/Homepage/Homepage';
-import DashboradMain from './components/Dashboard/Main/dashboradMain';
-import StudentRegister from './components/StudentRegister/StudentRegisterPage/studentRegister';
+import DashboardMain from './components/Dashboard/Main/DashboardMain'; // Corrected typo
+import StudentRegister from './components/StudentRegister/StudentRegisterPage/StudentRegister';
 import AddTeacher from './components/Dashboard/AddTeacher/AddTeacher';
 import AddSubject from './components/Dashboard/AddSubject/AddSubject';
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Homepage/>}/>
-        <Route exact path='/home' element={<DashboradMain/>} />
-        <Route exact path='/register' element={<StudentRegister/>} />
-        <Route exact path='/addTeacher' element={<AddTeacher/>}/>
-        <Route exact path='/addSubject' element={<AddSubject/>}/>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/home" element={<DashboardMain />} />
+        <Route path="/register" element={<StudentRegister />} />
+        <Route path="/addTeacher" element={<AddTeacher />} />
+        <Route path="/addSubject" element={<AddSubject />} />
       </Routes>
     </Router>
   );
